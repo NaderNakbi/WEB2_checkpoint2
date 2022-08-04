@@ -1,0 +1,15 @@
+PROCEDURE Insertion_sort(VAR T : ARRAY_OF FLOAT[])
+VAR
+    i,j:INTEGER
+    x:FLOAT
+BEGIN
+    FOR i FROM 1 TO T.Length-1 STEP 1  DO
+        x:=T[i]
+        j:=i
+        WHILE (j>0 and T[j-1]>x) DO
+            T[j]:=T[j-1]
+            j:=j-1
+        END_WHILE
+        T[j]:=x
+    END_FOR
+END    

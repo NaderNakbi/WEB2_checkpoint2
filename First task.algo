@@ -1,0 +1,30 @@
+ FUNCTION produit(v1,v2) : INTEGER;
+ VAR
+    ps=integer 
+ BEGIN
+  ps=v1[0]*v2[0]+v1[1]*v2[1]
+
+  write("ps")
+    RETURN ps ;
+ END
+
+ALGORITHM Dot product
+VAR
+    n,i:INTEGER
+    P:Integer
+    V1,V2 : ARRAY_OF integer[2]
+BEGIN
+    Write("Set n ")
+    Read(n)
+    FOR i FROM 1 TO n STEP 1  DO
+        Read(V1[0],V1[1])
+        Read(V2[0],V2[1])
+        P=produit(V1,V2)
+        IF (P=0) THEN
+            Write("V1 et V2 sont orthogonaux")
+        ELSE
+            Write("V1 et V2 ne sont pas orthogonaux")
+        END_IF ()
+    END_FOR
+END
+
